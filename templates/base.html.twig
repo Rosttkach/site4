@@ -5,15 +5,17 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/design/favicon.ico') }}" />
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-            {% endblock %}
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
     <div class="example-wrapper">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Пайп-Трейд-Сервіс </a>
+        <a class="navbar-brand" href="{{ path('home') }}">
+            <img alt="Brand" src="{{ asset('img/design/logo.gif') }}">
+            Пайп-Трейд-Сервіс </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,21 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="material-icons">
-                            home
-                        </i>
-                         Головна <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ path('home') }}"><i class="material-icons">home</i>Головна <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="material-icons">
-                            contact_phone
-                        </i> Контакти</a>
+                    <a class="nav-link" href="{{ path('contact') }}"><i class="material-icons">contact_phone</i> Контакти</a>
                 </li>
                 <li class="nav-item">
-
-                    <a class="nav-link" href="#"><i class="material-icons">
-                            work
-                        </i> Прайси</a>
+                    <a class="nav-link" href="{{ path('price') }}"><i class="material-icons">work</i> Прайси</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Товари</a>
@@ -91,8 +85,55 @@
 
     </main>
     {% block body %}{% endblock %}
+    <hr>
     <footer class="container">
-        <p>&copy; Company 2017-2018</p>
+        <div class="footer">
+            <div class="footer_wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4><p>Контакти</p></h4>
+                            <br>
+                            т. (044) 360-68-17 <br>
+                            т. (044) 360-74-21 <br>
+                            м. (050) 154-87-57 - МТС <br>
+                            м. (050) 545-63-09 - МТС <br>
+                            м. (096) 482-43-52 - Київстар
+
+                            <p>e-mail: <a href="&#109;a&#105;l&#116;&#111;:&#114;&#111;&#115;&#116;&#116;&#107;&#97;&#99;&#104;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Відправити e-mail</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <h4>Категорії товарів</h4>
+                            <ul>
+                                <li><a href="/chapter/food" >Лактоза</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Перехід по сайту</h4>
+                            <ul>
+                                <li><a href="/" >Головна</a></li>
+                                <li><a href="#" >Категорії товарів</a></li>
+                                <li><a href="#" >Контакти</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Завжди Вам раді</h4>
+                            <img src="{{ asset('img/design/phone.png') }}" /><br><br>
+
+                            <div class="pluso" data-background="transparent" data-options="big,round,multiline,horizontal,nocounter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print" data-url="http://www.lactoza.org.ua" data-title="Пищевые фармацевтически добавки и добавки для комбикрмрв" data-description="Пищевые добавки
+                Пищевые добавки применяются: для усовершенствования технологической подготовки и обработки пищевого сырья, изготовления, фасования и транспортировки готового товара;
+                Корректировки вкусовых и внешних качеств, аромата, консистенции и тому подобныех характеристик сырья и продуктов на его основе;
+                Продления сроков хранения продуктов питания при условии, что не маскируют последствия использования испорченного сырья;
+                Максимально сохраняют природные качества продукта;
+                Повышают стабильные качества продукции при заданных условиях хранения."></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>&copy; Company 2005-2018</p>
     </footer>
 
 

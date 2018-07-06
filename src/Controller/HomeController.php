@@ -5,15 +5,15 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class PageController extends Controller
+class HomeController extends Controller
 {
     /**
-     * @Route("/page", name="page")
+     * @Route("/", name="home")
      */
     public function index()
     {
-        return $this->render('page/index.html.twig', [
-            'controller_name' => 'PageController',
+        return $this->render('home/index.html.twig', [
+            'controller_name' => 'HomeController',
         ]);
     }
 }
