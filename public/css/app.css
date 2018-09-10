@@ -9,7 +9,39 @@
 .jumbotron {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    /*background-image: url('../../img/fon-1.jpg');*/
-    background-color: #e9ecef;
+    /*background-color: #e9ecef;*/
     border-radius: .3rem;
+    background: url(../img/design/manufactury.jpg) 100% 10% no-repeat; /* Добавляем фон */
+    background-size: cover; /* Масштабируем фон */
+}
+
+.alert-info {
+    color: #ebf3f5;
+    background-color: #06213c78;
+    border-color: #bee5eb00;
+}
+
+.text-primary {
+    color: #ebf3f5!important;
+}
+
+a {
+    color: #48b4f3;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 1060px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+footer.container {
+    /*max-width: 1050px;
+    width: 95%;
+    background-color: #2e3436;*/
 }

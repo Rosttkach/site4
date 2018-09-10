@@ -34,11 +34,14 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Товари</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Металорукави / компенсатори</a>
-                        <a class="dropdown-item" href="#">Швидкороз'ємні з'єднання</a>
-                        <a class="dropdown-item" href="#">Шланги / Рукави</a>
-                        <a class="dropdown-item" href="#">Фитинги для труб</a>
-                        <a class="dropdown-item" href="#">Сантехнічне обладнання</a>
+                        <a class="dropdown-item" href="{{ path('metallhose') }}"><img height="60px" src="{{ asset ('img/stainless_hose/stainless-hose.jpg')}}" alt="stainless-hose"/> Металорукави</a>
+                        <a class="dropdown-item" href="{{ path('strip_wound') }}"><img height="60px" src="{{ asset ('img/gofra/vihlopnaya-gofra.jpg')}}" alt="vihlopnaya-gofra"/> Вихлопна гофра</a>
+                        <a class="dropdown-item" href="{{ path('expansion_joint') }}"><img height="60px" src="{{ asset ('img/expantion-joints/expantion-joints.jpg')}}" alt="expantion-joints"/> Компенсатори</a>
+                        <a class="dropdown-item" href="{{ path('hose') }}"><img height="60px" src="{{ asset ('img/hose/hose.jpg')}}" alt="hose"/> Шланги / Рукави</a>
+                        <a class="dropdown-item" href="{{ path('tap') }}"><img height="60px" src="{{ asset ('img/tap/tap.jpg')}}" alt="tap"/> Крани</a>
+                        <a class="dropdown-item" href="{{ path('fitting_hydraulic') }}"><img height="60px" src="{{ asset ('img/hidraulic-fittings/hidraulic-fittings.jpg')}}" alt="hidraulic-fittings"/> Фітинги гідравлічні</a>
+                        <a class="dropdown-item" href="{{ path('quick_release') }}"><img height="60px" src="{{ asset ('img/quick_release/quick_release.jpg')}}" alt="quick_release"/> Швидкороз'ємні з'єднання</a>
+                        <a class="dropdown-item" href="{{ path('fitting_pipe') }}"><img height="60px" src="{{ asset ('img/fitting_pipe/fitting_pipe.jpg')}}" alt="fittings-cluster"/> Фітинги для труб, Фланці</a>
                     </div>
                 </li>
             </ul>
@@ -56,12 +59,14 @@
         <div class="jumbotron">
             <div class="container">
                 <br>
-                <h1 class="display-4">Товари для Вашого виробництва</h1>
+
+                <p><h2 class="text-primary alert  alert-info" >Товари для Вашого виробництва</h2></p>
+                <h5 class="alert  alert-info">
                 <p>(044) 360-74-21</p>
-                <p>(050) 154-87-57,</p>
+                <p>(050) 154-87-57</p>
                 <p>(096) 482-43-52</p>
                 <p>e-mail: <a href="&#109;a&#105;l&#116;&#111;:&#114;&#111;&#115;&#116;&#116;&#107;&#97;&#99;&#104;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Відправити e-mail</a>
-
+                </h5>
             </div>
         </div>
         <div class="container">
@@ -78,7 +83,6 @@
                     <div class="row">
                         <div class="col-md-3">
                             <h4><p>Контакти</p></h4>
-                            <br>
                             т. (044) 360-68-17 <br>
                             т. (044) 360-74-21 <br>
                             м. (050) 154-87-57 - МТС <br>
@@ -92,7 +96,14 @@
                         <div class="col-md-3">
                             <h4>Категорії товарів</h4>
                             <ul>
-                                <li><a href="/chapter/food" >Лактоза</a></li>
+                                <li><a href="{{ path('metallhose') }}" >Металорукави</a></li>
+                                <li><a href="{{ path('strip_wound') }}" >Вихлопна гофра</a></li>
+                                <li><a href="{{ path('expansion_joint') }}" >Компенсатори</a></li>
+                                <li><a href="{{ path('hose') }}" >Шланги / Рукави</a></li>
+                                <li><a href="{{ path('tap') }}" >Крани</a></li>
+                                <li><a href="{{ path('fitting_hydraulic') }}" >Фітинги гідравлічні</a></li>
+                                <li><a href="{{ path('quick_release') }}" >Швидкороз'ємні з'єднання</a></li>
+                                <li><a href="{{ path('fitting_pipe') }}" >Фітинги для труб, Фланці</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3">
@@ -120,8 +131,6 @@
         </div>
         <p>&copy; Company 2005-2018</p>
     </footer>
-
-
 
     {% block javascripts %}
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
